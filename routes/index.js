@@ -7,8 +7,6 @@ module.exports = (app) => {
 		message: 'Clase 5 Icaro',
 	}));
 
-	app.post('/api/authors/create/name/:name/lastname/:lastname', authorsControllers.create);
-	app.get('/api/authors/find/name/:name', authorsControllers.find);
-	app.post('/api/authors/updateAuthor', authorsControllers.updateAuthor);
+	app.get('/api/authors/find/id/:id', authorsControllers.find);
 
 };
