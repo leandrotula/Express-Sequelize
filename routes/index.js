@@ -8,5 +8,7 @@ module.exports = (app) => {
 	}));
 
 	app.get('/api/authors/find/id/:id', authorsControllers.find);
+	
+	app.post('/api/authors', authorsControllers.create);
 
 };

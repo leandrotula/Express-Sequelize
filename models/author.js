@@ -1,3 +1,5 @@
+const uuid = require('uuid')
+
 'use strict';
 const {
   Model
@@ -16,7 +18,11 @@ module.exports = (sequelize, DataTypes) => {
   author.init({
     name: DataTypes.STRING,
     lastname: DataTypes.STRING,
-    age: DataTypes.INTEGER
+    age: DataTypes.INTEGER,
+    id: {
+      primaryKey: true,
+      type: DataTypes.INTEGER
+    }
   }, {
     sequelize,
     modelName: 'author',
